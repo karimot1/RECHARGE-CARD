@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        body{
+            width:100%;
+            height:100vh;
+            display: flex;
+            justify-content: center;
+            /* align-items: center; */
+            background-color:whitesmoke;
+            background-image: url(background1.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .get{
+            display: flex;
+            flex-wrap: wrap;
+            gap:15px;
+        }
+         h1{
+            font-size:20px;
+            font-weight: 500;
+            font-family:Arial, Helvetica, sans-serif ;
+            color:rgba(255, 255, 255, 0.747);
+            line-height:30px;
+
+        }
+        select{
+            width:80px;
+            height: 30px;
+            border-radius:5px;
+            font-size:16px;
+            font-weight: 500;
+            font-family:Arial, Helvetica, sans-serif ;
+            
+        }
+        select:focus{
+            outline:rgba(0, 0, 0, 0.315);
+        }
+        .generate{
+            background-color: rgba(0, 0, 0, 0.705);
+            width:110px;
+            height:30px;
+            border:0;
+            border-radius:5px;
+            font-size:16px;
+            font-weight: 500;
+            font-family:Arial, Helvetica, sans-serif ;
+            color:white;
+        }
+         p{
+            font-size:20px;
+            font-weight: 500;
+            font-family:Arial, Helvetica, sans-serif ;
+            color:black;
+            text-align: center;
+        }
+        
+        .div1{
+            width:320px;
+            height:190px;
+            background-image:url(Globacom.webp) ;
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding-left:20px;
+            padding-top:20px;
+            border:1px solid black;
+            box-shadow:3px 3px 5px 5px rgba(255, 255, 255, 0.171);
+        }
+        .div{
+            width:320px;
+            height:190px;
+            background-image:url(mtn.png) ;
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding-left:20px;
+            padding-top:20px;
+            border:1px solid black;
+            box-shadow:3px 3px 5px 5px rgba(255, 255, 255, 0.171);
+        }
+        .div2{
+            width:320px;
+            height:190px;
+            background-image:url(airtel.png) ;
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding-left:20px;
+            padding-top:20px;
+            border:1px solid black;
+            box-shadow:3px 3px 5px 5px rgba(255, 255, 255, 0.171);
+        }
+        .div3{
+            width:320px;
+            height:190px;
+            background-image:url(9Mobile-Telecom-Logo.jpg) ;
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding-left:20px;
+            padding-top:20px;
+            border:1px solid black;
+            box-shadow:3px 3px 5px 5px rgba(255, 255, 255, 0.171);
+        }
+        .text{
+            display: flex;
+            flex-wrap: wrap;
+            width:750px;
+            gap:20px;
+          margin-top:70px;
+        }
+        .div1 h1{
+            color:white;
+        }
+        .div3 h1{
+            color:white;
+        }
+        input{
+            width:200px;
+            height:30px;
+            border-radius:5px;
+            border:0;
+            margin-top:40px;
+            background-color: antiquewhite;
+        }
+        .load{
+            width:90px;
+            height:30px;
+            border-radius:5px;
+            border:0;
+            margin-top:40px;
+            background-color: antiquewhite;
+            font-size:16px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 500;
+            color:rgba(0, 0, 0, 0.342);
+        }
+        .load:hover{
+            background-color: rgba(250, 235, 215, 0.623);
+        }
+        
+        .allairtime{
+           margin-top:30px;
+        }
+        #congrat3{
+            
+            font-size:20px;
+            font-weight: 500;
+            font-family:Arial, Helvetica, sans-serif ;
+            color:white;
+            text-align: center;
+        }
+        h2{
+            font-size:30px;
+            font-weight: 700;
+            font-family:Arial, Helvetica, sans-serif ;
+            color:white;
+            text-align: center;
+            margin-top:10px;
+        }
+        @media (max-width:790px) {
+            .text{
+            display: flex;
+            flex-wrap: wrap;
+            width:100%;
+            gap:30px;
+          margin-top:70px;
+         
+        }
+        }
+        @media (max-width:730px) {
+            .text{
+            display: flex;
+            flex-wrap: wrap;
+            width:100%;
+            gap:30px;
+          margin-top:70px;
+         
+        }
+        .div1{
+            width:45%;
+            height:190px;
+            padding-left:0px;
+        }
+        .div{
+            width:45%;
+            height:190px;
+            padding-left:0px;
+        }
+        .div2{
+            width:45%;
+            height:190px;
+            padding-left:0px;
+        }
+        .div3{
+            width:45%;
+            height:190px;
+            padding-left:0px;
+        }
+        }
+        @media (max-width:670px) {
+            .text{
+            display: flex;
+            flex-wrap: wrap;
+            width:100%;
+            gap:30px;
+          margin-top:70px;
+         
+        }
+        .div1{
+            width:60%;
+            height:190px;
+            padding-left:20px;
+        }
+        .div{
+            width:60%;
+            height:190px;
+            padding-left:20px;
+        }
+        .div2{
+            width:60%;
+            height:190px;
+            padding-left:20px;
+        }
+        .div3{
+            width:60%;
+            height:190px;
+            padding-left:20px;
+        }
+        body{
+            width:100%;
+            height:1200px;
+        }
+        }
+        @media (max-width:506px) {
+            .text{
+            display: flex;
+            flex-wrap: wrap;
+            width:100%;
+            gap:30px;
+          margin-top:70px;
+         
+        }
+        .div1{
+            width:70%;
+            height:190px;
+            padding-left:20px;
+        }
+        .div{
+            width:70%;
+            height:190px;
+            padding-left:20px;
+        }
+        .div2{
+            width:70%;
+            height:190px;
+            padding-left:20px;
+        }
+        .div3{
+            width:70%;
+            height:190px;
+            padding-left:20px;
+        }
+        body{
+            width:100%;
+            height:1200px;
+        }
+        }
+        @media (max-width:437px) {
+            .text{
+            display: flex;
+            flex-wrap: wrap;
+            width:100%;
+            gap:10px;
+          margin-top:70px;
+         
+        }
+        .div1{
+            width:100%;
+            height:200px;
+            padding-left:20px;
+        }
+        .div{
+            width:100%;
+            height:200px;
+            padding-left:20px;
+        }
+        .div2{
+            width:100%;
+            height:200px;
+            padding-left:20px;
+        }
+        .div3{
+            width:100%;
+            height:200px;
+            padding-left:20px;
+        }
+        body{
+            width:100%;
+            height:1200px;
+        }
+        input{
+            width:200px;
+            height:30px;
+            margin-top:20px;
+        }
+        .load{
+            margin-top:20px;
+        }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h2>TOLU TELCOMMS</h2>
+        <div class="allairtime">
+        <h1>Airtime Voucher Generate</h1>
+        <div class="get">
+            <div class="loads">
+                <select name="" id="network">
+                    <option  value="MTN">MTN</option>
+                    <option  value="glo">glo</option>
+                    <option  value="airtel">airtel</option>
+                    <option   value="9mobile">9mobile</option>
+                </select>
+                </div>
+                <div class="amount">
+                 <select name="" id="amount">
+            <option value="100">100</option>   
+            <option value="200">200</option>
+            <option value="200">500</option>
+            <option value="200">1000</option>
+        </select>
+        </div>
+        <button class="generate" onclick="generate()">Generate pin</button>
+        
+        </div>
+        <h1 id="code"></h1>
+        </div>
+        
+            <div class="text">
+        <div id="" class="div">
+            
+                <h1>MTN</h1>
+      
+            <input id="inputpin" type="text"  placeholder="*555*pin#">
+            <Button class="load" onclick="loadmtn()">Load Airtime</Button>
+            <p id="congrat"></p>
+        </div>
+        
+        <div id="glo" class="div1">
+            <h1>GLO</h1>
+            <input id="inputglo" type="text" placeholder="*123*pin#">
+            <Button class="load" onclick="loadglo()">Load Airtime</Button>
+            <p id="congrat1"></p>
+        </div>
+        <div class="div2">
+            <h1>AIRTEL</h1>
+            <input id="inputair" type="text" placeholder="*222*pin#">
+            <Button class="load" onclick="loadairtel()">Load Airtime</Button>
+            <p id="congrat2"></p>
+        </div>
+         <div class="div3">
+            <h1>9MOBILE</h1>
+            <input id="inputmob" type="text" placeholder="*311*pin#">
+            <Button class="load" onclick="load9mobil()">Load Airtime</Button>
+            <p id="congrat3"></p>
+        </div>
+        </div>
+    </main>
+</body>
+</html>
+<script>
+    let Amount = document.getElementById("amount")
+    let Network = document.getElementById("network")
+    let code = document.getElementById("code")
+   let balance = 0
+    //to generate 
+    function generate(){
+        let random_Number = Math.floor(Math.random()*1000000000000000)
+        console.log(random_Number)
+        code.innerHTML =  random_Number
+         alert(`you have generated your ${Network.value} of ${Amount.value} pin code`)
+    }
+
+    //mtn
+    let inputpin = document.getElementById('inputpin')
+    let p = document.getElementById('congrat')
+    function loadmtn() {
+      let code = document.getElementById("code").innerHTML
+      if (!inputpin.value.startsWith('*555*') || !inputpin.value.endsWith('#') || inputpin.value.includes(code.innerHTML)) {
+        alert("invalid code")
+        inputpin.value = ''
+      } else if (network. value !=="MTN"){
+        alert("invalid network provider");
+      }
+      else {
+        alert(`MTN voucher of ${Amount.value} have been recharge`)
+        inputpin.value = ''
+        code.innerHTML = ''
+        congrat.innerHTML = `CONGRATS ! you credit balance is : ${balance += Number(Amount.value)}`
+      }
+    }
+
+    //glo
+    let inputglo = document.getElementById('inputglo')
+    let p1 = document.getElementById('congrat1')
+    function loadglo() {
+        let code = document.getElementById("code").innerHTML
+        if (!inputglo.value.startsWith('*123*') || !inputglo.value.endsWith('#') || inputglo.value.includes(code.innerHTML)) {
+            alert("invalid code")
+        inputglo.value = ''
+        }else if (network. value !=="glo"){
+        alert("invalid network provider");
+      } else {
+            alert(`GLO voucher of ${Amount.value} have been recharge`)
+        inputglo.value = ''
+        code.innerHTML = ''
+        congrat1.innerHTML = `CONGRATS ! you credit balance is : ${balance += Number(Amount.value)}`
+        }
+    }
+
+    //airtel
+    let inputair = document.getElementById('inputair')
+    let p2 = document.getElementById('congrat2')
+    function loadairtel() {
+        let code = document.getElementById("code").innerHTML
+        if (!inputair.value.startsWith('*222*') || !inputair.value.endsWith('#') || inputair.value.includes(code.innerHTML)) {
+            alert("invalid code")
+           
+        inputair.value = ''
+        } else if (network. value !=="airtel"){
+        alert("invalid network provider");
+      }else {
+            alert(`AIRTEL voucher of ${Amount.value} have been recharge`)
+        inputair.value = ''
+        code.innerHTML = ''
+        congrat2.innerHTML = `CONGRATS ! you credit balance is : ${balance += Number(Amount.value)}`
+        }
+    }
+
+    //9mobile
+
+    let inputmob = document.getElementById('inputmob')
+    let p3 = document.getElementById('congrat3')
+    function load9mobil() {
+        let code = document.getElementById("code").innerHTML
+        if (!inputmob.value.startsWith('*311*') || !inputmob.value.endsWith('#') || inputmob.value.includes(code.innerHTML)) {
+            alert("invalid code")
+        inputmob.value = ''
+        }else if (network.value !=="9mobile"){
+        alert("invalid network provider");
+      }else {
+            alert(`9MOBILE voucher of ${Amount.value} have been recharge`)
+        inputmob.value = ''
+        code.innerHTML = ''
+        congrat3.innerHTML = `CONGRATS ! you credit balance is : ${balance += Number(Amount.value)}`
+        }
+    }
+</script>
