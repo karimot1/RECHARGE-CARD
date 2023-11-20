@@ -335,8 +335,8 @@
                  <select name="" id="amount">
             <option value="100">100</option>   
             <option value="200">200</option>
-            <option value="200">500</option>
-            <option value="200">1000</option>
+            <option value="500">500</option>
+            <option value="1000">1000</option>
         </select>
         </div>
         <button class="generate" onclick="generate()">Generate pin</button>
@@ -384,9 +384,15 @@
    let balance = 0
     //to generate 
     function generate(){
-        let random_Number = Math.floor(Math.random()*1000000000000000)
-        console.log(random_Number)
-        code.innerHTML =  random_Number
+        let pin = ""
+        for (let index = 0; index < 14; index++) {
+             pin += Math.floor(Math.random()*10)
+            
+        }
+        code.innerHTML = pin
+        // let random_Number = Math.floor(Math.random()*1000000000000000)
+        // console.log(random_Number)
+        // code.innerHTML =  random_Number
          alert(`you have generated your ${Network.value} of ${Amount.value} pin code`)
     }
 
